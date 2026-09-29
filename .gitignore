@@ -1,0 +1,47 @@
+# Never publish environment files, including examples.
+.env
+.env.*
+**/.env
+**/.env.*
+*.env
+*.env.*
+# Private runtime memory; sanitized seeds live only under templates/workspace/.
+/MEMORY.md
+/DREAMS.md
+/memory/
+# Runtime, machine-local credentials, adoption records, and backups.
+.openclaw/
+.clawhub/
+.clawdhub/
+auth/
+credentials/
+secrets/
+backups/
+backup/
+logs/
+*.bak
+*.backup
+*.key
+*.pem
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.log
+.DS_Store
