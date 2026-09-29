@@ -2,9 +2,9 @@
 
 Build the working local SqueezeAlert V1 from this repository's architecture pack. You are the lead Python engineer. This prompt authorizes ordinary local implementation, dependency setup, and offline verification for TASKS.md phases 1–5; continue through them without repeatedly asking whether to proceed.
 
-Use the application repository as the working directory, not the separate private OpenClaw workspace. Keep active memory/diary and installed agent instructions in that workspace; resolve repository references from the inspected repository root and private note paths from the existing workspace. Do not change the agent identity/workspace or copy runtime notes into repository templates.
+Use the application repository as the working directory. Keep private agent configuration and notes outside Git.
 
-First inspect the current repository so you preserve existing work. Read AGENTS.md, ARCHITECTURE.md, docs/TIER_RULES.md, docs/CONTRACTS.md, docs/ACCEPTANCE.md, docs/CONFIGURATION.md, TASKS.md, and DECISIONS.md. Use the project skills as appropriate. A single lead agent is sufficient; if delegating, use explicit role briefs and nonoverlapping ownership from docs/AGENT_ROLES.md.
+First inspect the current repository so you preserve existing work. Read AGENTS.md, ARCHITECTURE.md, docs/TIER_RULES.md, docs/CONTRACTS.md, docs/ACCEPTANCE.md, docs/CONFIGURATION.md, TASKS.md, and DECISIONS.md. A single lead agent is sufficient; if delegating, use explicit role briefs and nonoverlapping ownership from docs/AGENT_ROLES.md.
 
 Build a Python 3.11+ package using FastAPI, SQLAlchemy/aiosqlite, Alembic, Pydantic settings, httpx, supervised asyncio loops, pytest, and Ruff. Use pyproject.toml and a lockfile. Keep application logic in the proposed src/squeeze_alert layout, simplifying only when responsibilities remain clear.
 
@@ -26,4 +26,4 @@ Do not add trade execution, broker connections, direct Reddit polling, a dashboa
 
 Run the relevant acceptance checks and configured lint. Use temporary local databases and mocked HTTP; no real Telegram sends or public deployment is part of this prompt. Correct failures in scope. Update README and RUNBOOK so their commands match what actually works.
 
-Finish with: implemented behavior; commands/checks actually run and results; a reproducible local demo command; remaining live/manual gates; updated TASKS.md; and a short factual daily memory note in the private workspace (never in this repository). Do not mark phase 6 complete. Do not create commits or publish a repository unless separately requested.
+Finish with: implemented behavior; commands/checks actually run and results; a reproducible local demo command; remaining live/manual gates; updated TASKS.md; and a concise evidence-backed implementation report. Do not mark phase 6 complete. Do not create commits or publish a repository unless separately requested.

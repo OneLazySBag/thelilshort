@@ -10,25 +10,17 @@ Use `pyproject.toml` plus `uv.lock` as the dependency source of truth. Do not ma
 
 ## Proposed tree
 
-Files under `src/`, `tests/`, `migrations/`, `scripts/`, and `tradingview/`, plus `pyproject.toml`, `uv.lock`, and `alembic.ini`, are planned implementation files, not included application code. See README.md for the actual design-pack tree. Root agent instruction files are versioned templates. The active OpenClaw workspace is a separate private directory: its MEMORY.md, DREAMS.md, dated notes, and local machine/installation records are never part of this tree. Application commands and relative database paths resolve from the repository root.
+Files under `src/`, `tests/`, `migrations/`, `scripts/`, and `tradingview/`, plus `pyproject.toml`, `uv.lock`, and `alembic.ini`, are planned implementation files, not included application code. See README.md for the actual design-pack tree. AGENTS.md contains repository-specific engineering instructions; private agent workspace files are outside this tree. Application commands and relative database paths resolve from the repository root.
 
 ```text
 squeeze-alert-v1/
 ├── README.md
 ├── ARCHITECTURE.md
 ├── AGENTS.md
-├── SOUL.md
-├── IDENTITY.md
-├── USER.md
-├── TOOLS.md
-├── SKILLS.md
-├── DREAMING.md
-├── HEARTBEAT.md
 ├── ROADMAP.md
 ├── TASKS.md
 ├── DECISIONS.md
 ├── RUNBOOK.md
-├── OPENCLAW_SETUP.md
 ├── .gitignore
 ├── pyproject.toml
 ├── uv.lock
@@ -91,22 +83,9 @@ squeeze-alert-v1/
 │   ├── AGENT_ROLES.md
 │   ├── SOURCES.md
 │   └── CONFIGURATION.md
-├── skills/
-│   ├── squeeze-build/SKILL.md
-│   ├── squeeze-integrations/SKILL.md
-│   ├── squeeze-review/SKILL.md
-│   ├── squeeze-operations/SKILL.md
-│   └── squeeze-memory/SKILL.md
 ├── prompts/
-│   ├── 01-INITIALIZE.md
 │   ├── 02-BUILD.md
-│   ├── 03-REVIEW.md
-│   └── 04-REFLECT.md
-├── templates/workspace/           # sanitized seeds, not private runtime notes
-│   ├── README.md
-│   ├── MEMORY.md
-│   ├── DREAMS.md
-│   └── memory/README.md
+│   └── 03-REVIEW.md
 └── data/                           # runtime only, gitignored
 ```
 

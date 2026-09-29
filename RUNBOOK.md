@@ -2,7 +2,7 @@
 
 The following command interface is a target for the implementation, not a claim that commands work in this documentation-only pack. Update this file to match the actual implementation before declaring the MVP complete.
 
-Run application commands from the repository root, not the separate OpenClaw workspace. Read [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for the proposed settings. All private memory, diary, and adoption records stay in the agent workspace or another private location outside this repository.
+Run application commands from the repository root. Read [docs/CONFIGURATION.md](docs/CONFIGURATION.md) for the proposed settings.
 
 ## Local development after implementation
 
@@ -57,7 +57,3 @@ Retention is initially manual; do not add automatic deletion without a defined p
 ## Live activation
 
 Live operation is a separate task after the offline build. Needed inputs: verified Fintel mode and entitlements, verified TradingView producer and coverage, public endpoint, bot/destination credentials, persistent host, and the user's activation request. Until then, complete local implementation and report external dependencies precisely.
-
-## Reflection
-
-For an explicitly requested manual reflection, use prompts/04-REFLECT.md in the main private session. Do not schedule reflection, native dreaming, or heartbeat jobs just by following this runbook. Application job health belongs in runtime inspection; durable engineering lessons belong in project memory.

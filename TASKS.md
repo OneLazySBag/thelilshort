@@ -46,7 +46,7 @@ Exit evidence: adapter contract checks pass; unsupported live integrations are e
 - [ ] Exercise database migration and pending-work restart recovery.
 - [ ] Update README/RUNBOOK with commands actually implemented.
 - [ ] Run the review prompt and resolve material findings.
-- [ ] Record completion evidence, limitations, and next steps in dated memory.
+- [ ] Record completion evidence, limitations, and next steps in the repository task/decision documentation.
 
 Exit evidence: reproducible fixture demo for tiers, duplicate, cooldown, escalation, and expiry; clean checks; no claimed live readiness.
 

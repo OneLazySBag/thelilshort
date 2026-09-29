@@ -50,4 +50,12 @@ TRADINGVIEW_ALLOWED_PRODUCER=squeeze-v1-main
 TRADINGVIEW_ALLOWED_SCRIPT_VERSION=squeeze-v1
 ```
 
-These defaults preserve the supplied draft rules. The implementation must validate placeholders, threshold ordering, source modes, and fixture/dry-run isolation as specified in [TOOLS.md](../TOOLS.md) and [TIER_RULES.md](TIER_RULES.md). No credentials or live destination have been supplied.
+These defaults preserve the supplied draft rules. The implementation must validate placeholders, threshold ordering, source modes, and fixture/dry-run isolation as specified below and in [TIER_RULES.md](TIER_RULES.md). No credentials or live destination have been supplied.
+
+## Startup validation and operating modes
+
+Load and validate configuration once at startup. Reject fixture data combined with requested real delivery, missing/placeholder webhook credentials, invalid threshold ordering, nonpositive polling/TTL limits, and unsupported modes. A local demo helper may generate ephemeral test-only credentials without printing them.
+
+`DATA_MODE=fixture` means no external source traffic. `DATA_MODE=live` permits verified source adapters. `FINTEL_MODE` independently selects fixture, authorized local import, or verified live API; any fixture evidence still blocks real notifications. `TELEGRAM_DRY_RUN=true` is independent of data mode. Telegram credentials are required only for live delivery. Fintel live mode requires a verified contract and entitlement, not just a nonempty key.
+
+Use separate local databases for offline demos and live operation. Inspection uses a separate admin token. Never display environment-file contents or full provider URLs containing credentials. Once implemented, keep these documented defaults synchronized with the validated application settings and executable tests.

@@ -5,7 +5,7 @@
 **/.env.*
 *.env
 *.env.*
-# Private runtime memory; sanitized seeds live only under templates/workspace/.
+# Private runtime memory stays outside the repository.
 /MEMORY.md
 /DREAMS.md
 /memory/
